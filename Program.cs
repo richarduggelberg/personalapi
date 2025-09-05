@@ -32,7 +32,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
-s
+
 // In-memory "database"
 var items = new List<string>();
 

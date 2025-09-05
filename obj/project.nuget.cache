@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4r9q4sM0Y28=",
+  "dgSpecHash": "sLRplIdGuxI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\New folder\\PersonalApi\\PersonalApi.csproj",
+  "projectFilePath": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\personalapi\\PersonalApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RichardUggelberg\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.19\\microsoft.aspnetcore.openapi.8.0.19.nupkg.sha512",
     "C:\\Users\\RichardUggelberg\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

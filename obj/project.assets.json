@@ -487,11 +487,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\New folder\\PersonalApi\\PersonalApi.csproj",
+      "projectUniqueName": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\personalapi\\PersonalApi.csproj",
       "projectName": "PersonalApi",
-      "projectPath": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\New folder\\PersonalApi\\PersonalApi.csproj",
+      "projectPath": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\personalapi\\PersonalApi.csproj",
       "packagesPath": "C:\\Users\\RichardUggelberg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\New folder\\PersonalApi\\obj\\",
+      "outputPath": "C:\\Users\\RichardUggelberg\\OneDrive - XLENT\\Skrivbordet\\personalapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\RichardUggelberg\\AppData\\Roaming\\NuGet\\NuGet.Config",
