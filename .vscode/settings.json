@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/d715ee46-cf72-4a5c-b4e8-ebbfa3adf3a0/resourceGroups/appsvc_windows_westeurope/providers/Microsoft.Web/sites/PersonalApi",
+  "appService.deploySubpath": "PersonalApi"
+}
