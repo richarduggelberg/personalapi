@@ -32,6 +32,29 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+s
+// In-memory "database"
+var items = new List<string>();
+
+app.MapPost("/items", (string item) =>
+{
+    items.Add(item);
+    return Results.Ok(new { message = "Item added", count = items.Count });
+});
+
+app.MapGet("/items", () =>
+{
+    return Results.Ok(items);
+});
+
+app.MapDelete("/items/{index}", (int index) =>
+{
+    if (index < 0 || index >= items.Count)
+        return Results.NotFound();
+
+    items.RemoveAt(index);
+    return Results.Ok(new { message = "Item deleted" });
+});
 
 app.Run();
 
