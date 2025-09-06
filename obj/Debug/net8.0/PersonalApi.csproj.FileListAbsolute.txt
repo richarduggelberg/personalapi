@@ -49,9 +49,9 @@ C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.sourcelink.json
-C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.dll
-C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\refint\PersonalApi.dll
-C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.pdb
+C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\publish\web.config
+C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\web.config
+C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\web.config
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\appsettings.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\appsettings.Development.json
@@ -62,9 +62,6 @@ C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\appsettings.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\PersonalApi.deps.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\PersonalApi.runtimeconfig.json
-C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\publish\web.config
-C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\web.config
-C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\web.config
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\publish\appsettings.Development.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\publish\appsettings.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\bin\Debug\net8.0\publish\publish\publish\PersonalApi.deps.json
@@ -88,5 +85,8 @@ C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\scopedcss\bundle\PersonalApi.styles.css
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\Personal.8E0F0B49.Up2Date
+C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.dll
+C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\refint\PersonalApi.dll
+C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.pdb
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\PersonalApi.genruntimeconfig.cache
 C:\Users\RichardUggelberg\OneDrive - XLENT\Skrivbordet\personalapi\obj\Debug\net8.0\ref\PersonalApi.dll
