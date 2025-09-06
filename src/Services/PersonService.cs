@@ -21,9 +21,11 @@ public class PersonService : IPersonService
 
     public Person AddPerson(string firstname, string lastname, string email)
     {
-        if (string.IsNullOrWhiteSpace(email) || !email.Contains("@")) 
+        if (string.IsNullOrWhiteSpace(firstname) ||
+            string.IsNullOrWhiteSpace(lastname) ||
+            string.IsNullOrWhiteSpace(email))
         {
-            throw new ArgumentException("Invalid email");
+            throw new ArgumentException("Firstname, lastname, and email cannot be empty");
         }
 
         var existingPersons = GetAllPersons();
