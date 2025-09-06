@@ -7,6 +7,7 @@ public interface IPersonService
 {
     Person AddPerson(string firstname, string lastname, string email);
     IEnumerable<Person> GetAllPersons();
+    void DeletePersonByEmail(string email);
 }
 
 public class PersonService : IPersonService
@@ -47,5 +48,16 @@ public class PersonService : IPersonService
     public IEnumerable<Person> GetAllPersons()
     {
         return _repository.GetAll();
+    }
+
+    public void DeletePersonByEmail(string email)
+    {
+        var person = _repository.GetAll()
+            .FirstOrDefault(p => p.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+
+        if (person == null)
+            throw new ArgumentException("Person not found");
+
+        _repository.Remove(person); // We'll need to add this method in the repository
     }
 }

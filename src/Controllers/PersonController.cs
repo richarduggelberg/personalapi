@@ -36,5 +36,19 @@ public class PersonController : ControllerBase
         var persons = _service.GetAllPersons();
         return Ok(persons);
     }
+
+    [HttpDelete("{email}")]
+    public IActionResult Delete([FromRoute] string email)
+    {
+        try
+        {
+            _service.DeletePersonByEmail(email);
+            return Ok(new { message = "Person deleted" });
+        }
+        catch (ArgumentException ex)
+        {
+            return NotFound(new { error = ex.Message });
+        }
+    }
 }
 
