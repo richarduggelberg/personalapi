@@ -20,13 +20,16 @@ public class PersonService : IPersonService
 
     public Person AddPerson(string firstname, string lastname, string email)
     {
-        if (string.IsNullOrWhiteSpace(email) || !email.Contains("@"))
+        if (string.IsNullOrWhiteSpace(email) || !email.Contains("@")) 
+        {
             throw new ArgumentException("Invalid email");
+        }
 
         var existingPersons = GetAllPersons();
 
-        if (existingPersons.Contains(p => p.Email.Equals(email))) {
-            throw new ArgumentException("Person with the email already exists");
+        if (existingPersons.Any(p => p.Email.Equals(email, StringComparison.OrdinalIgnoreCase)))
+        {
+            throw new ArgumentException("Person with this email already exists");
         }
 
         var newPerson = new Person
