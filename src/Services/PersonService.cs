@@ -60,6 +60,6 @@ public class PersonService : IPersonService
         if (person == null)
             throw new ArgumentException("Person not found");
 
-        _repository.Remove(person); // We'll need to add this method in the repository
+        _repository.Remove(person);
     }
 }
