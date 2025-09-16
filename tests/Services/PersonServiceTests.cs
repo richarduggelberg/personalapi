@@ -88,7 +88,7 @@ public class PersonServiceTests
     }
 
     // Helper to filter out control characters
-    public static class CustomGenerators
+    public static class ValidGenerator
     {
         // Define what is allowed in names (letters, spaces, hyphens, maybe apostrophes)
         private static bool IsValidNameChar(char c) =>
@@ -111,7 +111,7 @@ public class PersonServiceTests
         }
     }
 
-    [Property(Arbitrary = new[] { typeof(CustomGenerators) })]
+    [Property(Arbitrary = new[] { typeof(ValidGenerator) })]
     public void AddPerson_WithArbitraryInputs_ShouldBeRetrievable(
         NonEmptyString firstName,
         NonEmptyString lastName,
@@ -132,4 +132,44 @@ public class PersonServiceTests
             p.Email == safeEmail
         );
     }
+
+    public static class InvalidGenerator
+    {
+        // Anything not allowed in names
+        private static bool IsInvalidNameChar(char c) =>
+            !char.IsLetter(c) && c != '-' && c != '\''; // letters, hyphen, apostrophe are valid
+
+        // Anything not allowed in emails
+        private static bool IsInvalidEmailChar(char c) =>
+            !char.IsLetterOrDigit(c) && c != '@' && c != '.' && c != '-' && c != '_';
+
+        public static Arbitrary<NonEmptyString> InvalidName()
+        {
+            return Arb.Default.NonEmptyString()
+                    .Filter(s => s.Get.Any(IsInvalidNameChar));
+        }
+
+        public static Arbitrary<NonEmptyString> InvalidEmail()
+        {
+            return Arb.Default.NonEmptyString()
+                    .Filter(s => s.Get.Any(IsInvalidEmailChar));
+        }
+    }
+
+    public class PersonServiceInvalidTests
+    {
+    [Property(Arbitrary = new[] { typeof(InvalidGenerator) })]
+    public void AddPerson_WithInvalidInputs_ShouldThrow(
+        NonEmptyString firstName,
+        NonEmptyString lastName,
+        NonEmptyString email)
+    {
+        var service = new PersonService(new PersonRepository());
+
+        var safeEmail = email.Item + Guid.NewGuid() + "@example.com";
+
+        Assert.Throws<ArgumentException>(() =>
+            service.AddPerson(firstName.Item, lastName.Item, safeEmail));
+    }
+}
 }
