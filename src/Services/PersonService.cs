@@ -1,5 +1,6 @@
 using PersonalApi.Models;
 using PersonalApi.Repositories;
+using System.Text.RegularExpressions;
 
 namespace PersonalApi.Services;
 
@@ -27,6 +28,17 @@ public class PersonService : IPersonService
         {
             throw new ArgumentException("Firstname, lastname, and email cannot be empty");
         }
+
+        // Check for invalid characters in names (only letters, spaces, hyphens, apostrophes)
+        if (!Regex.IsMatch(firstname, @"^[A-Za-z\s'-]+$"))
+            throw new ArgumentException("Firstname contains invalid characters");
+
+        if (!Regex.IsMatch(lastname, @"^[A-Za-z\s'-]+$"))
+            throw new ArgumentException("Lastname contains invalid characters");
+
+        // Simple email validation
+        if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            throw new ArgumentException("Email is invalid");
 
         var existingPersons = GetAllPersons();
 
