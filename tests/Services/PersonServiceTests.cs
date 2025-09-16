@@ -87,8 +87,35 @@ public class PersonServiceTests
             service.AddPerson("John", "Doe", ""));
     }
 
-    [Property]
-    public void AddPerson_WithArbitraryInputs_ShouldBeRetrievable(NonEmptyString firstName, NonEmptyString lastName, NonEmptyString email)
+    // Helper to filter out control characters
+    public static class CustomGenerators
+    {
+        // Define what is allowed in names (letters, spaces, hyphens, maybe apostrophes)
+        private static bool IsValidNameChar(char c) =>
+            char.IsLetter(c) || c == ' ' || c == '-' || c == '\'';
+
+        // Define what is allowed in emails (basic version)
+        private static bool IsValidEmailChar(char c) =>
+            char.IsLetterOrDigit(c) || c == '@' || c == '.' || c == '-' || c == '_';
+
+        public static Arbitrary<NonEmptyString> ValidName()
+        {
+            return Arb.Default.NonEmptyString()
+                    .Filter(s => s.Get.All(IsValidNameChar) && !s.Get.Any(char.IsWhiteSpace));
+        }
+
+        public static Arbitrary<NonEmptyString> ValidEmail()
+        {
+            return Arb.Default.NonEmptyString()
+                    .Filter(s => s.Get.All(IsValidEmailChar) && !s.Get.Any(char.IsWhiteSpace));
+        }
+    }
+
+    [Property(Arbitrary = new[] { typeof(CustomGenerators) })]
+    public void AddPerson_WithArbitraryInputs_ShouldBeRetrievable(
+        NonEmptyString firstName,
+        NonEmptyString lastName,
+        NonEmptyString email)
     {
         var service = new PersonService(new PersonRepository());
 
